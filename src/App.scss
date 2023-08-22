@@ -1,0 +1,15 @@
+.image-container svg {
+  height: 400px;
+  width: auto; // 425.45
+}
+.point {
+  position: relative;
+  left:315px;
+  top: 120px;
+
+
+  height: 10px;
+  width: 10px;
+  outline: 5px solid red;
+  border-radius: 50%;
+}

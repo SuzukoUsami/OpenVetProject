@@ -1,0 +1,29 @@
+{
+  "root": {
+    "id": 3,
+    "meta": {
+      "name": "basic doggo skeletom"
+    },
+    "parts": [
+      "head",
+      "back",
+      "tail",
+      "front legs",
+      "front paws",
+      "back legs",
+      "back paws",
+      "tail"
+    ],
+    "text": "this is a basic doggo"
+  },
+
+  "front paw": {
+    "id": 24,
+    "meta": {
+      "name": "doggo front paw skeletom",
+      "tags": ["leg", "paw", "dog", "run", "move"]
+    },
+    "parts": ["toe", "nail", "wrist"],
+    "text": "this is a basic doggo paw. It has 5 toes."
+  }
+}
