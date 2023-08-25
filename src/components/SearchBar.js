@@ -1,7 +1,12 @@
-import { useState } from "react"
+import { useState } from "react";
 
-function SearchBar({ onAddDefinition }) {
-    const [definition, setDefinition] = useState("")
+function SearchBar({ onAddAsk }) {
+    const [ask, setAsk] = useState("ask???");
+
+    const onInputChange = (e) => {
+        setAsk(e.target.value)
+        onAddAsk(e.target.value)
+    };
 
     return (
         <div>
@@ -11,23 +16,19 @@ function SearchBar({ onAddDefinition }) {
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
-                    value={definition}
-                    onChange={(e) => setDefinition(e.target.value)}
+                    value={ask}
+                    onChange={(e) => {
+                        onInputChange(e)
+                    }}
                 />
 
-                <button
-                    className="btn btn-outline-success p-2"
-                    type="submit"
-                    onClick={() => {
-                        setDefinition("")
-                        onAddDefinition(definition)
-                    }}
-                >
+                <button className="btn btn-outline-success p-2" type="submit">
                     Search
                 </button>
             </form>
+            {ask}
         </div>
-    )
+    );
 }
 
-export default SearchBar
+export default SearchBar;
