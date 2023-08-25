@@ -1,4 +1,5 @@
 import PurpleCatLogo from "./images/Logo-cat-purrrple-wbg.svg"
+import SearchBar from "./components/SearchBar"
 
 function Navbar() {
     return (
@@ -16,20 +17,9 @@ function Navbar() {
                             />
                             OpenVetProject
                         </div>
-                        <form className="col align-self-end" role="search">
-                            <input
-                                className="form-control me-2"
-                                type="search"
-                                placeholder="Search"
-                                aria-label="Search"
-                            />
-                            <button
-                                className="btn btn-outline-success p-2"
-                                type="submit"
-                            >
-                                Search
-                            </button>
-                        </form>
+                        <div className="col align-self-end">
+                            <SearchBar />
+                        </div>
                     </div>
                 </div>
             </nav>
