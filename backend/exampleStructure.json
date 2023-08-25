@@ -1,29 +1,93 @@
 {
-  "root": {
-    "id": 3,
-    "meta": {
-      "name": "basic doggo skeletom"
-    },
-    "parts": [
-      "head",
-      "back",
-      "tail",
-      "front legs",
-      "front paws",
-      "back legs",
-      "back paws",
-      "tail"
-    ],
-    "text": "this is a basic doggo"
-  },
+    "animals": [
+        {
+            "id": 3,
+            "name": "doggo",
+            "description": "basic doggo skeleton",
 
-  "front paw": {
-    "id": 24,
-    "meta": {
-      "name": "doggo front paw skeletom",
-      "tags": ["leg", "paw", "dog", "run", "move"]
-    },
-    "parts": ["toe", "nail", "wrist"],
-    "text": "this is a basic doggo paw. It has 5 toes."
-  }
+            "parts": [
+                {
+                    "id": 25,
+                    "name": "head",
+                    "position": { "x": 123, "y": 368 }
+                },
+                {
+                    "id": 23,
+                    "name": "back",
+                    "position": { "x": 123, "y": 368 }
+                },
+                {
+                    "id": 23,
+                    "name": "tail",
+                    "position": { "x": 123, "y": 368 }
+                },
+                {
+                    "id": 23,
+                    "name": "front legs",
+                    "position": { "x": 123, "y": 368 }
+                },
+                {
+                    "id": 24,
+                    "name": "front paws",
+                    "position": { "x": 123, "y": 368 }
+                },
+                {
+                    "id": 23,
+                    "name": "back legs",
+                    "position": { "x": 123, "y": 368 }
+                },
+                {
+                    "id": 23,
+                    "name": "back paws",
+                    "position": { "x": 123, "y": 368 }
+                }
+            ]
+        }
+    ],
+    "parts": [
+        {
+            "name": "front paw",
+            "id": 24,
+            "parentId": 3,
+            "position": {
+                "x": 123,
+                "y": 368
+            },
+
+            "tags": ["leg", "paw", "front", "dog", "run", "move"],
+            "anatomy type": "skeleton",
+
+            "parts": ["toe", "nail", "wrist"],
+            "description": "this is a basic doggo paw. It has 5 toes."
+        },
+        {
+            "name": "nose",
+            "id": 26,
+            "parentId": 3,
+            "position": {
+                "x": 315,
+                "y": 120
+            },
+
+            "tags": ["front", "dog", "head", "smell"],
+            "anatomy type": "skeleton",
+
+            "description": "this is a basic snoot, sniff sniff"
+        },
+        {
+            "name": "head",
+            "id": 25,
+            "parentId": 3,
+            "position": {
+                "x": 123,
+                "y": 368
+            },
+
+            "tags": ["front", "dog", "run", "move"],
+            "anatomy type": "skeleton",
+
+            "parts": ["eyes", "mouth"],
+            "description": "this is a basic doggo paw. It has 5 toes."
+        }
+    ]
 }
