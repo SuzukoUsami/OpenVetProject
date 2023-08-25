@@ -1,21 +1,17 @@
-import "./custom.scss"
+import "./custom.scss";
 
 // import { ReactComponent as Catto } from "./images/cat.svg"
 
-import Navbar from "./Navbar"
-import SearchBarInput from "./components/SearchBarInput"
+import Navbar from "./Navbar";
+import MainContent from "./MainContent";
 
 function App() {
     return (
-        <div className="App">
+        <div className="App" data-bs-theme="dark">
             <Navbar></Navbar>
-            <SearchBarInput></SearchBarInput>
-            {/* <div className="image-container">
-                <div className="point"></div>
-                <Catto />
-            </div> */}
+            <MainContent></MainContent>
         </div>
-    )
+    );
 }
 
-export default App
+export default App;
