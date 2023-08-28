@@ -1,5 +1,5 @@
-import PurpleCatLogo from "./images/Logo-cat-purrrple-wbg.svg";
-import SearchBar from "./components/SearchBar";
+import PurpleCatLogo from "../images/Logo-cat-purrrple-wbg.svg";
+import SearchBar from "./SearchBar";
 import { useState } from "react";
 
 function Navbar() {

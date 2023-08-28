@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import getPartFromId from "./api";
+import getPartFromId from "../api";
 
-import { ReactComponent as Cat } from "./images/cat.svg";
+import { ReactComponent as Cat } from "../images/cat.svg";
 
 function MainContent() {
     const [partInfo, setPartInfo] = useState("loading...");

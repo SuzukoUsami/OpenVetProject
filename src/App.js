@@ -2,8 +2,8 @@ import "./custom.scss";
 
 // import { ReactComponent as Catto } from "./images/cat.svg"
 
-import Navbar from "./Navbar";
-import MainContent from "./MainContent";
+import Navbar from "./components/Navbar";
+import MainContent from "./components/MainContent";
 
 function App() {
     return (
