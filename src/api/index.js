@@ -7,10 +7,21 @@ const config = {
 
 const api = axios.create(config);
 
-export default async function getPartFromId(partId) {
+export async function getPartFromId(id) {
     try {
-        const response = await api.get(`/parts?id=${partId}`);
-        console.log(response);
+        const response = await api.get(`/parts?id=${id}`);
+        //console.log(response);
+        return response.data[0];
+    } catch (error) {
+        console.error(error);
+        return error;
+    }
+}
+
+export async function getAnimalFromId(id) {
+    try {
+        const response = await api.get(`/animals?id=${id}`);
+        //console.log(response);
         return response.data[0];
     } catch (error) {
         console.error(error);
