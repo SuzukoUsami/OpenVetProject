@@ -48,13 +48,60 @@
             ]
         },
         {
-            "id": 3,
+            "id": 1,
             "name": "shiba inu doggo",
-            "description": "basic doggo skeleton",
+            "description": "basic doggo anatomy",
             "dimensions": {
                 "width": 948,
                 "height": 773
-            }
+            },
+            "parts": [
+                {
+                    "id": 2,
+                    "name": "nose",
+                    "position": { "x": 900, "y": 173 }
+                },
+                {
+                    "id": 3,
+                    "name": "right ear",
+                    "position": { "x": 189, "y": 19 }
+                },
+                {
+                    "id": 4,
+                    "name": "left ear",
+                    "position": { "x": 201, "y": 11 }
+                },
+                {
+                    "id": 5,
+                    "name": "eye",
+                    "position": { "x": 218, "y": 35 }
+                },
+                {
+                    "id": 6,
+                    "name": "fluff belly",
+                    "position": { "x": 107, "y": 116 }
+                },
+                {
+                    "id": 7,
+                    "name": "fluffy tail",
+                    "position": { "x": 48, "y": 28 }
+                },
+                {
+                    "id": 8,
+                    "name": "front paw",
+                    "position": { "x": 159, "y": 177 }
+                },
+                {
+                    "id": 9,
+                    "name": "back paw",
+                    "position": { "x": 39, "y": 177 }
+                },
+                {
+                    "id": 10,
+                    "name": "claw",
+                    "position": { "x": 169, "y": 192 }
+                }
+            ]
         }
     ],
     "parts": [

@@ -1,18 +1,32 @@
 import { useState, useEffect } from "react";
-import getPartFromId from "../api";
+import { getAnimalFromId, getPartFromId } from "../api";
+import _ from "lodash";
 
-import { ReactComponent as Cat } from "../images/cat.svg";
+import Dog from "../images/shiba-inu.jpg";
 
 function MainContent() {
     const [partInfo, setPartInfo] = useState("loading...");
+    const [animalInfo, setAnimalInfo] = useState("loading...");
 
     useEffect(() => {
         async function getData() {
-            const data = await getPartFromId(26);
-            setPartInfo(data);
+            setPartInfo(await getPartFromId(26));
+            setAnimalInfo(await getAnimalFromId(1));
         }
         getData();
     }, []);
+
+    function renderPoint(){
+        const info = animalInfo // {name, id, parts ...}
+        
+        const part = _.get(info, "parts[0].position", "nope")
+
+        console.log(part);
+
+        return(
+            <div className="point"  style={{position: "relative", left: 900, top: 173}}>X</div>
+        )
+    }
 
     return (
         <div className="mx-5 my-3">
@@ -22,9 +36,10 @@ function MainContent() {
                 </div>
                 <div className="col-5 border border-primary-subtle">
                     <div>image with points</div>
+                    <div>Animal name: {animalInfo?.name}</div>
                     <div className="image-container">
-                        <div className="point">X</div>
-                        <Cat />
+                        {renderPoint()}
+                        <img src={Dog} />
                     </div>
                 </div>
                 <div className="col-4 border border-primary-subtle">
