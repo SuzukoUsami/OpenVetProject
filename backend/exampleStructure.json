@@ -1,9 +1,13 @@
 {
     "animals": [
         {
-            "id": 3,
-            "name": "doggo",
+            "id": 0,
+            "name": "example doggo",
             "description": "basic doggo skeleton",
+            "dimensions": {
+                "width": 1038,
+                "height": 802
+            },
 
             "parts": [
                 {
@@ -42,6 +46,15 @@
                     "position": { "x": 123, "y": 368 }
                 }
             ]
+        },
+        {
+            "id": 3,
+            "name": "shiba inu doggo",
+            "description": "basic doggo skeleton",
+            "dimensions": {
+                "width": 948,
+                "height": 773
+            }
         }
     ],
     "parts": [
