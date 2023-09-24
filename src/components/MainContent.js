@@ -1,12 +1,15 @@
+import _ from "lodash";
 import { useState, useEffect, Fragment } from "react";
 import { getAnimalFromId, getPartFromId } from "../api";
-import _ from "lodash";
+import { imageScaler, pointScaler, ratioCalculator } from "./imageScaler";
 
 import Dog from "../images/shiba-inu.jpg";
+import Point from "./Point";
+import Breadcrumbs from "./Breadcrumbs";
 
 function MainContent() {
-    const [partInfo, setPartInfo] = useState("loading...");
-    const [animalInfo, setAnimalInfo] = useState("loading...");
+    const [partInfo, setPartInfo] = useState(undefined);
+    const [animalInfo, setAnimalInfo] = useState(undefined);
 
     useEffect(() => {
         async function getData() {
@@ -17,41 +20,60 @@ function MainContent() {
     }, []);
 
     function renderPoints() {
-        const parts = animalInfo.parts; // {name, id, parts ...}
+        const parts = _.get(animalInfo, "parts", undefined); // {name, id, parts ...}
         if (parts === undefined) {
             return null;
         }
 
-        const mappedPoints = parts.map((part) => {
+        const scalingRatio = ratioCalculator(
+            _.get(animalInfo, "dimensions"),
+            [700, 0]
+        );
+
+        const mappedPoints = parts.map((part, index) => {
+            const position = pointScaler(part.position, scalingRatio);
+            //console.log(scalingRatio, part.position, index);
             return (
-                <div
-                    className="point"
+                <Point
+                    position={position}
                     key={part.id}
-                    style={{
-                        left: part.position.x,
-                        top: part.position.y,
-                    }}
-                ></div>
+                    onClick={() => console.log(part.name)}
+                ></Point>
             );
         });
 
+        return <Fragment>{mappedPoints}</Fragment>;
+    }
+
+    function renderImage() {
+        const targetDimensions = imageScaler(
+            _.get(animalInfo, "dimensions"),
+            [700, 0]
+        );
         return (
-            <Fragment>{mappedPoints}</Fragment>
+            <img
+                src={Dog}
+                alt="doggo"
+                style={{
+                    width: targetDimensions[0],
+                    height: targetDimensions[1],
+                }}
+            />
         );
     }
-    const x = "kitku";
+
     return (
         <div className="mx-5 my-3">
             <div className="row justify-content-evenly">
                 <div className="col-2 border border-primary">
-                    sidebar - breadcrumbs
+                    <Breadcrumbs />
                 </div>
                 <div className="col-5 border border-primary-subtle">
                     <div>image with points</div>
                     <div>Animal name: {animalInfo?.name}</div>
                     <div className="image-container">
-                        {renderPoints()}
-                        <img src={Dog} />
+                        {animalInfo ? renderPoints() : "loading..."}
+                        {animalInfo ? renderImage() : "loading..."}
                     </div>
                 </div>
                 <div className="col-4 border border-primary-subtle">
