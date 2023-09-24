@@ -8,7 +8,7 @@
                 "width": 1038,
                 "height": 802
             },
-
+ 
             "parts": [
                 {
                     "id": 25,
@@ -64,42 +64,42 @@
                 {
                     "id": 3,
                     "name": "right ear",
-                    "position": { "x": 189, "y": 19 }
+                    "position": { "x": 718, "y": 74 }
                 },
                 {
                     "id": 4,
                     "name": "left ear",
-                    "position": { "x": 201, "y": 11 }
+                    "position": { "x": 762, "y": 50 }
                 },
                 {
                     "id": 5,
                     "name": "eye",
-                    "position": { "x": 218, "y": 35 }
+                    "position": { "x": 826, "y": 136 }
                 },
                 {
                     "id": 6,
                     "name": "fluff belly",
-                    "position": { "x": 107, "y": 116 }
+                    "position": { "x": 429, "y": 440 }
                 },
                 {
                     "id": 7,
                     "name": "fluffy tail",
-                    "position": { "x": 48, "y": 28 }
+                    "position": { "x": 206, "y": 111 }
                 },
                 {
                     "id": 8,
                     "name": "front paw",
-                    "position": { "x": 159, "y": 177 }
+                    "position": { "x": 602, "y": 679 }
                 },
                 {
                     "id": 9,
                     "name": "back paw",
-                    "position": { "x": 39, "y": 177 }
+                    "position": { "x": 164, "y": 700 }
                 },
                 {
                     "id": 10,
                     "name": "claw",
-                    "position": { "x": 169, "y": 192 }
+                    "position": { "x": 640, "y": 724 }
                 }
             ]
         }
