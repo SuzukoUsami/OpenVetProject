@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { getAnimalFromId, getPartFromId } from "../api";
 import _ from "lodash";
 
@@ -16,18 +16,30 @@ function MainContent() {
         getData();
     }, []);
 
-    function renderPoint(){
-        const info = animalInfo // {name, id, parts ...}
-        
-        const part = _.get(info, "parts[0].position", "nope")
+    function renderPoints() {
+        const parts = animalInfo.parts; // {name, id, parts ...}
+        if (parts === undefined) {
+            return null;
+        }
 
-        console.log(part);
+        const mappedPoints = parts.map((part) => {
+            return (
+                <div
+                    className="point"
+                    key={part.id}
+                    style={{
+                        left: part.position.x,
+                        top: part.position.y,
+                    }}
+                ></div>
+            );
+        });
 
-        return(
-            <div className="point"  style={{position: "relative", left: 900, top: 173}}>X</div>
-        )
+        return (
+            <Fragment>{mappedPoints}</Fragment>
+        );
     }
-
+    const x = "kitku";
     return (
         <div className="mx-5 my-3">
             <div className="row justify-content-evenly">
@@ -38,7 +50,7 @@ function MainContent() {
                     <div>image with points</div>
                     <div>Animal name: {animalInfo?.name}</div>
                     <div className="image-container">
-                        {renderPoint()}
+                        {renderPoints()}
                         <img src={Dog} />
                     </div>
                 </div>
