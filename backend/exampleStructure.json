@@ -4,46 +4,42 @@
             "id": 0,
             "name": "example doggo",
             "description": "basic doggo skeleton",
-            "dimensions": {
-                "width": 1038,
-                "height": 802
-            },
- 
+            "dimensions": [1038, 802],
             "parts": [
                 {
                     "id": 25,
                     "name": "head",
-                    "position": { "x": 123, "y": 368 }
+                    "position": [123, 368]
                 },
                 {
                     "id": 23,
                     "name": "back",
-                    "position": { "x": 123, "y": 368 }
+                    "position": [123, 368]
                 },
                 {
                     "id": 23,
                     "name": "tail",
-                    "position": { "x": 123, "y": 368 }
+                    "position": [123, 368]
                 },
                 {
                     "id": 23,
                     "name": "front legs",
-                    "position": { "x": 123, "y": 368 }
+                    "position": [123, 368]
                 },
                 {
                     "id": 24,
                     "name": "front paws",
-                    "position": { "x": 123, "y": 368 }
+                    "position": [123, 368]
                 },
                 {
                     "id": 23,
                     "name": "back legs",
-                    "position": { "x": 123, "y": 368 }
+                    "position": [123, 368]
                 },
                 {
                     "id": 23,
                     "name": "back paws",
-                    "position": { "x": 123, "y": 368 }
+                    "position": [123, 368]
                 }
             ]
         },
@@ -51,55 +47,52 @@
             "id": 1,
             "name": "shiba inu doggo",
             "description": "basic doggo anatomy",
-            "dimensions": {
-                "width": 948,
-                "height": 773
-            },
+            "dimensions": [948, 773],
             "parts": [
                 {
                     "id": 2,
                     "name": "nose",
-                    "position": { "x": 900, "y": 173 }
+                    "position": [900, 173]
                 },
                 {
                     "id": 3,
                     "name": "right ear",
-                    "position": { "x": 718, "y": 74 }
+                    "position": [718, 74]
                 },
                 {
                     "id": 4,
                     "name": "left ear",
-                    "position": { "x": 762, "y": 50 }
+                    "position": [762, 50]
                 },
                 {
                     "id": 5,
                     "name": "eye",
-                    "position": { "x": 826, "y": 136 }
+                    "position": [826, 136]
                 },
                 {
                     "id": 6,
                     "name": "fluff belly",
-                    "position": { "x": 429, "y": 440 }
+                    "position": [429, 440]
                 },
                 {
                     "id": 7,
                     "name": "fluffy tail",
-                    "position": { "x": 206, "y": 111 }
+                    "position": [206, 111]
                 },
                 {
                     "id": 8,
                     "name": "front paw",
-                    "position": { "x": 602, "y": 679 }
+                    "position": [602, 679]
                 },
                 {
                     "id": 9,
                     "name": "back paw",
-                    "position": { "x": 164, "y": 700 }
+                    "position": [164, 700]
                 },
                 {
                     "id": 10,
                     "name": "claw",
-                    "position": { "x": 640, "y": 724 }
+                    "position": [640, 724]
                 }
             ]
         }
@@ -109,10 +102,7 @@
             "name": "front paw",
             "id": 24,
             "parentId": 3,
-            "position": {
-                "x": 123,
-                "y": 368
-            },
+            "position": [123, 368],
 
             "tags": ["leg", "paw", "front", "dog", "run", "move"],
             "anatomy type": "skeleton",
@@ -124,10 +114,7 @@
             "name": "nose",
             "id": 26,
             "parentId": 3,
-            "position": {
-                "x": 315,
-                "y": 120
-            },
+            "position": [315, 120],
 
             "tags": ["front", "dog", "head", "smell"],
             "anatomy type": "skeleton",
@@ -138,10 +125,7 @@
             "name": "head",
             "id": 25,
             "parentId": 3,
-            "position": {
-                "x": 123,
-                "y": 368
-            },
+            "position": [123, 368],
 
             "tags": ["front", "dog", "run", "move"],
             "anatomy type": "skeleton",
