@@ -7,18 +7,20 @@ function Navbar() {
 
     return (
         <div>
-            <nav className="navbar bg-body-tertiary ">
-                <div className="container-fluid ">
+            <nav className="navbar bg-body-tertiary nav-style d-flex align-items-center">
+                <div className="container-fluid">
                     <div className="row">
                         <div className="col align-self-start">
                             <img
                                 src={PurpleCatLogo}
                                 alt="Logo"
-                                width="50"
-                                height="50"
-                                className="d-inline-block align-text-center"
+                                width="70"
+                                height="70"
+                                className=" "
                             />
-                            OpenVetProject
+                            <div className="col nav-text d-inline-block">
+                                OpenVetProject
+                            </div>
                         </div>
                         <div className="col align-self-end">
                             <SearchBar
@@ -27,7 +29,7 @@ function Navbar() {
                                 }}
                             />
                         </div>
-                        <div>You asked for: {showMeTheAsk}</div>
+                        {/* <div>You asked for: {showMeTheAsk}</div> */}
                     </div>
                 </div>
             </nav>

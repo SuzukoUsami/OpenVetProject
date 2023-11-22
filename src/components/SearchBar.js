@@ -1,31 +1,35 @@
 import { useState } from "react";
 
 function SearchBar({ onAddAsk }) {
-    const [ask, setAsk] = useState("ask???");
+    const [ask, setAsk] = useState(" ");
 
     const onInputChange = (e) => {
-        setAsk(e.target.value)
-        onAddAsk(e.target.value)
+        setAsk(e.target.value);
+        onAddAsk(e.target.value);
     };
 
     return (
         <div>
-            <form role="search">
+            <div className="input-group mb-3 d-flex">
                 <input
-                    className="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
+                    type="text"
+                    className="form-control searchbar-input"
+                    placeholder="Search..."
+                    aria-label="Search..."
+                    aria-describedby="button-addon2"
                     value={ask}
                     onChange={(e) => {
-                        onInputChange(e)
+                        onInputChange(e);
                     }}
                 />
-
-                <button className="btn btn-outline-success p-2" type="submit">
+                <button
+                    className="btn btn-outline searchbar-button "
+                    type="button"
+                    id="button-addon2"
+                >
                     Search
                 </button>
-            </form>
+            </div>
             {ask}
         </div>
     );
