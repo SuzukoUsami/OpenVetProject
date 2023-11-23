@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const config = {
-    baseURL: "http://localhost:3001",
+    baseURL: "http://localhost:3006",
     responseType: "json",
 };
 

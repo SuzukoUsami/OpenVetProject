@@ -6,9 +6,10 @@
 
 // 2. Include any default variable overrides here
 
-$primary: purple;
+$primary: #71217b;
 $opacity-primary: rgba(175, 98, 175, 0.281);
 $primary-text-color: #dee2e6;
+$primary-border: 2px solid $primary;
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../node_modules/bootstrap/scss/variables";
@@ -85,15 +86,34 @@ body {
     font-weight: 700;
 }
 
-.searchbar-input {
+svg {
+    fill: currentColor;
+}
+
+#searchbar-input {
     height: 3rem;
-    border: 2px solid #71217b;
+    border: $primary-border;
     text-align: left;
     box-shadow: 0px 16px 36px 0px rgba(145, 65, 172, 0.1) inset;
     position: relative;
+
+    &::placeholder {
+        color: $primary;
+    }
 }
 
 .searchbar-button {
-   
-    border: 2px solid #71217b;
+    height: 3rem;
+    border: $primary-border;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &:hover {
+        background-color: $primary;
+    }
+
+    #search-icon {
+        fill: #dee2e6;
+        margin-top: 0;
+    }
 }

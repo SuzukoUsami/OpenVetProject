@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { ReactComponent as SearchIcon } from "../images/magnifying-glass.svg";
 
 function SearchBar({ onAddAsk }) {
-    const [ask, setAsk] = useState(" ");
+    const [ask, setAsk] = useState("");
 
     const onInputChange = (e) => {
         setAsk(e.target.value);
@@ -9,29 +10,30 @@ function SearchBar({ onAddAsk }) {
     };
 
     return (
-        <div>
-            <div className="input-group mb-3 d-flex">
+        <>
+            <div className="input-group">
                 <input
                     type="text"
-                    className="form-control searchbar-input"
+                    id="searchbar-input"
+                    className="form-control"
                     placeholder="Search..."
                     aria-label="Search..."
-                    aria-describedby="button-addon2"
+                    aria-describedby="searchbar-button"
                     value={ask}
                     onChange={(e) => {
                         onInputChange(e);
                     }}
                 />
                 <button
-                    className="btn btn-outline searchbar-button "
+                    className="btn searchbar-button align-items-center"
                     type="button"
-                    id="button-addon2"
+                    id="searchbar-button"
                 >
-                    Search
+                    <SearchIcon id="search-icon" className="img-fluid" />
                 </button>
             </div>
             {ask}
-        </div>
+        </>
     );
 }
 
