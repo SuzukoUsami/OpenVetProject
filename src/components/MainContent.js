@@ -5,7 +5,7 @@ import { imageScaler, pointScaler, ratioCalculator } from "./imageScaler";
 
 import Dog from "../images/shiba-inu.jpg";
 import Point from "./Point";
-import Breadcrumbs from "./Breadcrumbs";
+import HierarchicalSystem from "./HierarchicalSystem";
 
 function MainContent() {
     const [partInfo, setPartInfo] = useState(undefined);
@@ -66,7 +66,7 @@ function MainContent() {
         <div className="mx-5 my-3">
             <div className="row justify-content-evenly">
                 <div className="col-2 border border-primary">
-                    <Breadcrumbs />
+                    <HierarchicalSystem />
                 </div>
                 <div className="col-5 border border-primary-subtle">
                     <div>image with points</div>

@@ -4,11 +4,13 @@ import "./custom.scss";
 
 import Navbar from "./components/Navbar";
 import MainContent from "./components/MainContent";
+import Filters from "./components/Filters";
 
 function App() {
     return (
         <div className="App" data-bs-theme="dark">
             <Navbar></Navbar>
+            <Filters></Filters>
             <MainContent></MainContent>
         </div>
     );
