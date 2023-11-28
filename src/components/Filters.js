@@ -1,6 +1,6 @@
 function Filters () {
     return(
-        <div>xd</div>
+        <div>Filters...</div>
     )
 }
 

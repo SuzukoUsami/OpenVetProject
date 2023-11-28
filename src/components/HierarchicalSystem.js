@@ -1,42 +1,66 @@
-import Breadcrumbs from "./Breadcrumbs";
+// import { useState } from "react";
 
-export default function HierarchicalSystem() {
-    return (
-        <div>
-            <div>
-                <Breadcrumbs/>
-            </div>
+// import { ReactComponent as ArrowDown } from "../images/chevron-down.svg";
+// import { ReactComponent as ArrowUp } from "../images/chevron-up.svg";
 
-            <div className="accordion accordion-flush" id="accordionHierarchy">
-                <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseOne"
-                        >
-                            Head
-                        </button>
-                    </h2>
+// import Breadcrumbs from "./Breadcrumbs";
 
-                    <div
-                        id="flush-collapseOne"
-                        className="accordion-collapse collapse"
-                        data-bs-parent="#accordionHierarchy"
-                    >
-                        <div className="accordion-body">
-                            Placeholder content for this accordion, which is
-                            intended to demonstrate the .accordion-flush class.
-                            This is the first item's accordion body.
-                        </div>
-                    </div>
-                </div>
+// export default function HierarchicalSystem({ items }) {
 
-            </div>
-            
-        </div>
-    );
-}
+//     const [expandedIndex, setExpandedIndex] = useState(-1);
+
+//     const handleClick = (nextIndex) => {
+//         setExpandedIndex((currentExpandedInex) => {
+//             if (currentExpandedIndex === nextIndex) {
+//                 return -1
+//             } else {
+//                 return nextIndex
+//             }
+//         })
+//     };
+
+//     const renderedItems = items.map((item, index) => {
+
+//         const isExpanded = index === expandedIndex
+
+//         const icon = (
+//             <span className="">
+//                 {isExpanded ? (
+//                     <ArrowDown />
+//                 ) : (
+//                     <ArrowUp />
+//                 )}
+//             </span>
+//         )
+
+//     }
+
+//     );
+
+//     return (
+//         <div>
+//             <div>
+//                 <Breadcrumbs />
+//             </div>
+
+//             <div>
+//                 <div className="" onClick={() => handleClick(index)}>
+//                     {icon}
+//                 </div>
+
+//                 {isExpanded && (
+//                     <div className="">
+//                         {items}
+//                     </div>
+//                 )}
+
+//             </div>
+
+//             return <div className="">
+//                 {renderedItems}
+//             </div>
+
+
+//         </div>
+//     );
+// }
