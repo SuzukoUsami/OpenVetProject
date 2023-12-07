@@ -50,71 +50,82 @@ $primary-border: 2px solid $primary;
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 body {
-    background-color: $dark;
-    color: white;
+  background-color: $dark;
+  color: white;
 }
 
 .image-container {
-    position: relative; // required to make `position: absolute` for points work
-    svg {
-        height: 400px;
-        width: auto; // 425.45
-    }
+  position: relative; // required to make `position: absolute` for points work
+  svg {
+    height: 400px;
+    width: auto; // 425.45
+  }
 }
 .point {
-    position: absolute;
-    height: 10px;
-    width: 10px;
-    outline: 5px solid red;
-    border-radius: 50%;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  outline: 5px solid red;
+  border-radius: 50%;
 }
 
 .btn-pointer {
-    @include button-variant($opacity-primary, $primary);
-    position: absolute;
-    padding: 8px;
+  @include button-variant($opacity-primary, $primary);
+  position: absolute;
+  padding: 8px;
 }
 
+//NAVBAR STYLE
+
 .nav-style {
-    width: 100%;
-    height: 5rem;
+  width: 100%;
+  height: 5rem;
 }
 
 .nav-text {
-    color: $primary-text-color;
-    font-family: Montserrat;
-    font-size: 1.625rem;
-    font-weight: 700;
+  color: $primary-text-color;
+  font-family: Montserrat;
+  font-size: 1.625rem;
+  font-weight: 700;
 }
 
+//SEARCHBAR STYLE
+
 svg {
-    fill: currentColor;
+  fill: currentColor;
 }
 
 #searchbar-input {
-    height: 3rem;
-    border: $primary-border;
-    text-align: left;
-    box-shadow: 0px 16px 36px 0px rgba(145, 65, 172, 0.1) inset;
-    position: relative;
+  height: 3rem;
+  border: $primary-border;
+  text-align: left;
+  box-shadow: 0px 16px 36px 0px rgba(145, 65, 172, 0.1) inset;
+  position: relative;
 
-    &::placeholder {
-        color: $primary;
-    }
+  &::placeholder {
+    color: $primary;
+  }
 }
 
 .searchbar-button {
-    height: 3rem;
-    border: $primary-border;
-    padding-top: 0;
-    padding-bottom: 0;
+  height: 3rem;
+  border: $primary-border;
+  padding-top: 0;
+  padding-bottom: 0;
 
-    &:hover {
-        background-color: $primary;
-    }
+  &:hover {
+    background-color: $primary;
+  }
 
-    #search-icon {
-        fill: #dee2e6;
-        margin-top: 0;
-    }
+  #search-icon {
+    fill: #dee2e6;
+    margin-top: 0;
+  }
+}
+
+//HIERARCHICAL SYSTEM/ACCORDION STYLE
+
+.accordion-arrow {
+  height: 2rem;
+  width: 2rem;
 }

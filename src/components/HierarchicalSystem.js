@@ -7,15 +7,15 @@ export default function HierarchicalSystem() {
     const accordionData = [
         {
             title: 'Head',
-            content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente laborum cupiditate possimus labore.'
+            content: 'You can pet me here as long as you want. I are good boi. Woof!'
         },
         {
             title: 'Belly',
-            content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente laborum cupiditate possimus labore'
+            content: 'You can also pet me here as long as you want. I love belly rubs!'
         },
         {
-            title: 'Chest',
-            content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente laborum cupiditate possimus labore'
+            title: 'Nose',
+            content: 'Guess what? Woof! You can boop my squishy, wet nose but be careful.'
         }
     ];
 
